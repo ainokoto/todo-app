@@ -132,3 +132,144 @@ h1 {
   font-size: 0.9rem;
   margin-top: 16px;
 }
+
+/* ── 同期エリア ── */
+.sync-area {
+  margin-top: 28px;
+  border-top: 1.5px solid #e8e8e8;
+  padding-top: 18px;
+}
+
+.sync-settings-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.88rem;
+  color: #666;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.sync-settings-toggle:hover {
+  color: #4f8ef7;
+}
+
+.toggle-icon {
+  font-size: 0.75rem;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.sync-settings-toggle[aria-expanded="true"] .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.sync-settings {
+  margin-top: 12px;
+  background: #f9f9f9;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sync-note {
+  font-size: 0.8rem;
+  color: #888;
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-radius: 6px;
+  padding: 8px 10px;
+  line-height: 1.5;
+}
+
+.sync-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sync-field label {
+  font-size: 0.8rem;
+  color: #555;
+  font-weight: 600;
+}
+
+.sync-field input {
+  padding: 8px 12px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.sync-field input:focus {
+  border-color: #4f8ef7;
+}
+
+#save-settings-btn {
+  align-self: flex-start;
+  padding: 7px 16px;
+  background: #666;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#save-settings-btn:hover {
+  background: #444;
+}
+
+.sync-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.sync-buttons button {
+  flex: 1;
+  padding: 9px 12px;
+  border: 1.5px solid #4f8ef7;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  background: #fff;
+  color: #4f8ef7;
+}
+
+.sync-buttons button:hover {
+  background: #4f8ef7;
+  color: #fff;
+}
+
+.sync-buttons button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.sync-status {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: #888;
+  min-height: 1.2em;
+}
+
+.sync-status.success {
+  color: #2e7d32;
+}
+
+.sync-status.error {
+  color: #c62828;
+}

@@ -18,8 +18,33 @@
     <ul id="todo-list"></ul>
 
     <p class="empty-message" id="empty-message">タスクはありません</p>
+
+    <!-- 同期エリア -->
+    <div class="sync-area">
+      <button class="sync-settings-toggle" id="settings-toggle" aria-expanded="false">
+        ⚙ 同期設定 <span class="toggle-icon" id="toggle-icon">▼</span>
+      </button>
+      <div class="sync-settings" id="sync-settings" hidden>
+        <p class="sync-note">&#x26A0; PATはこの端末のlocalStorageにのみ保存されます。他者と共有しないでください。</p>
+        <div class="sync-field">
+          <label for="pat-input">GitHub Personal Access Token</label>
+          <input type="password" id="pat-input" placeholder="ghp_xxxxxxxxxxxx" autocomplete="off">
+        </div>
+        <div class="sync-field">
+          <label for="gist-id-input">Gist ID</label>
+          <input type="text" id="gist-id-input" placeholder="例: a1b2c3d4e5f6..." autocomplete="off">
+        </div>
+        <button id="save-settings-btn">設定を保存</button>
+      </div>
+      <div class="sync-buttons">
+        <button id="sync-save-btn">&#x2191; クラウドに保存</button>
+        <button id="sync-load-btn">&#x2193; クラウドから読み込み</button>
+      </div>
+      <p class="sync-status" id="sync-status"></p>
+    </div>
   </div>
 
+  <script src="sync.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
